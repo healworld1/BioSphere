@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-interface Building : MonoBehaviour {
+abstract class Building : MonoBehaviour {
 	int sizeOccupied {
 		get;
 		set;
@@ -11,6 +11,7 @@ interface Building : MonoBehaviour {
 		get;
 		set;
 	}   // return the cost of the buildling;
-	string showProperty ()  // show the property a building will have in the text
-	bool availblility()// return the availbility of the building
+    abstract public string ShowProperty(); // show the property a building will have in the text
+
+    abstract public bool Availblility();// return the availbility of the building
 }
